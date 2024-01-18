@@ -1,6 +1,8 @@
 # front_prueba_I
-Si tienes cierta sitúa (Ur) y ya le diste 2 oportunidades ni le des mas chance haz el reporte si no sabes donde escríbeme ;) éxitos! ---> se encarga de revisar los prestamos de libros de una biblioteca y demás ...
+Si tienes cierta sitúa (Ur) y ya le diste 2 oportunidades ni le des mas chance haz el reporte si no sabes dónde escríbeme ;) éxitos! ---> se encarga de revisar los prestamos de libros de una biblioteca y demás ...
 
+Página de los elementos de las APi's para las pruebas:
+https://reqres.in/
 
 # Customer List
 
