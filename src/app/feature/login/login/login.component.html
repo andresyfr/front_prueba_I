@@ -1,0 +1,46 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+
+<div class="signin-content">
+  <form [formGroup]="form" (ngSubmit)="submitLogin()">
+    <div class="w-50 mx-auto pb-30">
+      <section>
+        <div class="layout-row align-items-start justify-content-center">
+          <div class="alert filled success" *ngIf="message">
+            {{messageString}}
+          </div>
+          <div class="alert filled error" *ngIf="error">
+            {{errorString}}
+          </div>
+        </div>
+      </section>
+    </div>
+  <div class="card w-50 mx-auto">
+    <div class="card-text">
+        <h1 class="text-capitalize text-center">Please authenticate to continue</h1>
+        <br>
+        <br>
+        <p class="mt-3 mb-4 text-center">
+          <label>
+            <input type="text" class="white large text-center" id="login__email" formControlName="email" placeholder="email">
+            <p class="form-hint error-text" id="login__email-error" *ngIf="atributosInvalidos('email')">Email is required</p>
+          </label>
+          <br>
+          <br>
+          <label>
+            <input type="text" class="white large text-center" id="login__password" formControlName="password" placeholder="password">
+            <p class="form-hint error-text" id="login__password-error" *ngIf="atributosInvalidos('password')">{{textPasswordError}}</p>
+          </label>
+        </p>
+    </div>
+    <div class="card-text">
+        <!-- <a href="#">Read More</a> -->
+        <p class="mt-3 mb-4 text-center">
+          <button type="submit" class="primary my-0 text-center" id="login__btn-login">Sing In</button>
+        </p>
+    </div>
+  </div>
+  </form>
+  </div>

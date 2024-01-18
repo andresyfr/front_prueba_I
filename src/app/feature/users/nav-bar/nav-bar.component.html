@@ -1,0 +1,28 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = nav-bar__btn-list-user, nav-bar__btn-create-user, nav-bar__btn-logout
+-->
+<nav class="app-header">
+  <section class="">
+    <div class="layout-row justify-content-center">
+      <h1 class="titulo">|++> Andresyfr + Crud y elementos básicos (Angular)</h1>
+    </div>
+  </section>
+</nav>
+<nav class="app-header" color="primary">
+  <div class="layout-row justify-content-between">
+      <section class="logo">
+        <span>
+          <img src="assets/images/logo/vid.svg" class="imagen-navbar" alt="Logo" />
+        </span>
+      </section>
+      <section>
+        <span class="llenar-espacios-columnas"> Login: {{(isLoggedIn | async)}} </span>
+        <button button routerLink="/users/home" *ngIf="(isLoggedIn | async)">Home</button>
+        <button button id="nav-bar__btn-create-user" routerLink="/users/create" *ngIf="(isLoggedIn | async)">Crear usuarios</button>
+        <button button id="nav-bar__btn-list-user" routerLink="/users/list" *ngIf="(isLoggedIn | async)">Listar usuarios</button>
+        <button button routerLink="/" *ngIf="!(isLoggedIn | async)">Login</button>
+        <button button (click)="logout()" *ngIf="(isLoggedIn | async)" id="nav-bar__btn-logout">Logout</button>
+      </section>
+  </div>
+</nav>
