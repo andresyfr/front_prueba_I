@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 120.1.61.101 (Linux x86_64)" package="unit" timestamp="2024-01-07T16:22:43" id="0" hostname="andres-pc1" tests="4" errors="0" failures="2" time="0.576">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/120.1.61.101 Safari/537.36"/>
+  </properties>
+  <testcase name="FilterUserByNamePipe create an instance" time="0.046" classname=".FilterUserByNamePipe"/>
+  <testcase name="CreateUserComponent Personal Test Andres=> Los campos están vacíos y deben aparecer el mensaje de error y deshabilitar para crear usuario" time="0.346" classname=".CreateUserComponent">
+    <failure type="">TypeError: Cannot read properties of null (reading 'value')
+    at UserContext.&lt;anonymous&gt; (src/app/feature/users/create-user/create-user.component.spec.ts:68:27)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:301:1)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:371:1)
+    at Zone.run (node_modules/zone.js/dist/zone-evergreen.js:134:1)
+    at runInTestZone (node_modules/zone.js/dist/zone-testing.js:581:1)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/dist/zone-testing.js:596:1)
+    at &lt;Jasmine&gt;
+</failure>
+  </testcase>
+  <testcase name="LoginComponent Personal Test Andres=> Validar existencias de los elementos por el ID" time="0.1" classname=".LoginComponent"/>
+  <testcase name="LoginComponent Personal Test Andres=> Inicia sesión, debe almacenar el token en localStorage y redirige la pagina" time="0.084" classname=".LoginComponent">
+    <failure type="">Error: Uncaught (in promise): Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'subscribe')
+TypeError: Cannot read properties of undefined (reading 'subscribe')
+    at LoginComponent.&lt;anonymous&gt; (src/app/feature/login/login/login.component.ts:56:43)
+    at Generator.next (&lt;anonymous&gt;)
+    at node_modules/tslib/tslib.es6.js:76:1
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1387:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15265:1)
+    at Object.wrapListenerIn_markDirtyAndPreventDefault [as next] (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15303:1)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'subscribe')
+TypeError: Cannot read properties of undefined (reading 'subscribe')
+    at LoginComponent.&lt;anonymous&gt; (src/app/feature/login/login/login.component.ts:56:43)
+    at Generator.next (&lt;anonymous&gt;)
+    at node_modules/tslib/tslib.es6.js:76:1
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1387:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15265:1)
+    at Object.wrapListenerIn_markDirtyAndPreventDefault [as next] (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15303:1)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+    at resolvePromise (node_modules/zone.js/dist/zone-evergreen.js:1213:1)
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1390:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15265:1)
+    at Object.wrapListenerIn_markDirtyAndPreventDefault [as next] (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15303:1)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+    at SafeSubscriber.next (node_modules/rxjs/_esm2015/internal/Subscriber.js:122:1)
+    at Subscriber._next (node_modules/rxjs/_esm2015/internal/Subscriber.js:72:1)
+error properties: Object({ rejection: Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'subscribe')
+TypeError: Cannot read properties of undefined (reading 'subscribe')
+    at LoginComponent.&lt;anonymous&gt; (src/app/feature/login/login/login.component.ts:56:43)
+    at Generator.next (&lt;anonymous&gt;)
+    at node_modules/tslib/tslib.es6.js:76:1
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1387:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/ ... ...
+Error: Uncaught (in promise): Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'subscribe')
+TypeError: Cannot read properties of undefined (reading 'subscribe')
+    at LoginComponent.&lt;anonymous&gt; (src/app/feature/login/login/login.component.ts:56:43)
+    at Generator.next (&lt;anonymous&gt;)
+    at node_modules/tslib/tslib.es6.js:76:1
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1387:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15265:1)
+    at Object.wrapListenerIn_markDirtyAndPreventDefault [as next] (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15303:1)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'subscribe')
+TypeError: Cannot read properties of undefined (reading 'subscribe')
+    at LoginComponent.&lt;anonymous&gt; (src/app/feature/login/login/login.component.ts:56:43)
+    at Generator.next (&lt;anonymous&gt;)
+    at node_modules/tslib/tslib.es6.js:76:1
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1387:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15265:1)
+    at Object.wrapListenerIn_markDirtyAndPreventDefault [as next] (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15303:1)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+    at resolvePromise (node_modules/zone.js/dist/zone-evergreen.js:1213:1)
+    at new ZoneAwarePromise (node_modules/zone.js/dist/zone-evergreen.js:1390:1)
+    at __awaiter (node_modules/tslib/tslib.es6.js:72:1)
+    at LoginComponent.submitLogin (main.js:215:71)
+    at LoginComponent_Template_form_ngSubmit_1_listener (ng:///LoginComponent.js:65:22)
+    at executeListenerWithErrorHandling (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15265:1)
+    at Object.wrapListenerIn_markDirtyAndPreventDefault [as next] (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:15303:1)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+    at SafeSubscriber.next (node_modules/rxjs/_esm2015/internal/Subscriber.js:122:1)
+    at Subscriber._next (node_modules/rxjs/_esm2015/internal/Subscriber.js:72:1)
+    at resolvePromise (node_modules/zone.js/dist/zone-evergreen.js:1213:1)
+    at node_modules/zone.js/dist/zone-evergreen.js:1120:1
+    at fulfilled (node_modules/tslib/tslib.es6.js:73:85)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
+    at FakeAsyncTestZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:1949:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:298:1)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:371:1)
+    at Zone.run (node_modules/zone.js/dist/zone-evergreen.js:134:1)
+    at node_modules/zone.js/dist/zone-evergreen.js:1276:1
+    at ZoneDelegate.invokeTask (node_modules/zone.js/dist/zone-evergreen.js:406:1)
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: <input _ngcontent-a-c47="" type="text" id="login__email" formcontrolname="email" placeholder="email" class="white large text-center ng-untouched ng-pristine ng-invalid" ng-reflect-name="email">
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'ingrese: submitLogin'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos cityslicka'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos cityslicka'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'Esperado: INPUT'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'Input name error: null'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'Input name error: null'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'Esperado: INPUT'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos '
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: <input _ngcontent-a-c48="" type="text" id="login__email" formcontrolname="email" placeholder="email" class="white large text-center ng-untouched ng-pristine ng-invalid" ng-reflect-name="email">
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'ingrese: submitLogin'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos cityslicka'
+,Chrome Headless 120.1.61.101 (Linux x86_64) LOG: 'value atributos invalidos cityslicka'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -1,0 +1,47 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = user-create__name, user-create__name-error, user-create__job, user-create__job-error, user-create__btn-create
+-->
+<div class="card flat">
+  <section class="card-text">
+   <div class="layout-row justify-content-around align-items-center">
+      <h3 class="mt-0 mb-0">Create users</h3>
+   </div>
+  </section>
+</div>
+<form [formGroup]="formCreateUsuario" (ngSubmit)="submitCreate()">
+  <div class="card w-50 mx-auto pb-30">
+
+    <section>
+      <div class="layout-row align-items-start justify-content-center">
+        <div class="alert filled success" *ngIf="message">
+          {{message}}
+        </div>
+        <div class="alert filled error" *ngIf="error">
+          {{error}}
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-row align-items-start justify-content-center">
+      
+      <div class="mx-auto pb-30">
+        <br>
+        <br>
+        <br>
+        <input type="text" class="white large" id="user-create__name" formControlName="name" placeholder="Name" required>
+        <p class="form-hint error-text" id="user-create__name-error" *ngIf="formCreateUsuario.get('name').hasError('required') && formCreateUsuario.get('name').touched">Name is required</p>
+        <br>
+        <input type="text" class="white large" id="user-create__job" formControlName="job" placeholder="Job" required>
+        <p class="form-hint error-text" id="user-create__job-error" *ngIf="atributosInvalidos('job')">Job is required</p>
+      </div>
+    </section>
+    <section>
+      <div class="text-center">
+        <button class="text-center" id="user-create__btn-create" [disabled]="formCreateUsuario.invalid">
+           Create
+        </button>
+      </div>
+    </section>
+  </div>
+  </form>

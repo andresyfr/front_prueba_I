@@ -1,0 +1,28 @@
+.imagen-navbar{
+    margin: 0 4px 3px 0;
+    height: 90px;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.llenar-espacios-columnas{
+    flex: 1 1 auto;
+}
+
+ .toolbar{
+    padding: 10px;
+    border-top: 3px solid #119b6d;
+    border-bottom: 3px solid #119b6d;
+    background: rgb(84, 195, 223);
+} 
+.toolbar.primary {
+    background: #119b6d;
+    color: #000000;
+}
+.button{
+    background: #c5dfd6;
+}
+.titulo{
+    text-align: center;
+    color: white;
+}

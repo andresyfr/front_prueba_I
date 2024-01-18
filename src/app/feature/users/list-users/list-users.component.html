@@ -1,0 +1,74 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = user-list__filter, user-list__table, user-list__table-item-[index], user-list__table-item-[index]-avatar, user-list__table-item-[index]-first_name, user-list__table-item-[index]-email, user-list__table-item-[index]-btn-delete
+  Remplazar [index] por el valor ejemplo "user-list__table-item-0"
+-->
+<div>
+  <div class="align-items-center">
+      <h1 class="text-center">List to users</h1>
+   </div>
+</div>
+
+<div>
+<form [formGroup]="formListaUsuarios">
+  <div class="w-50 mx-auto pb-30">
+    <section>
+      <div class="layout-row align-items-start justify-content-center">
+        <div class="alert filled success" *ngIf="message">
+          {{message}}
+        </div>
+        <div class="alert filled error" *ngIf="error">
+          {{error}}
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="w-50 mx-auto pb-30">
+    <section>
+      <div class="layout-row align-items-left justify-content-left">
+        <input type="text" [(formControl)]="terminoBuscado" placeholder="Search by name" id="user-list__filter">
+      </div>
+    </section>
+  </div>
+  <table id="user-list__table" class="card w-50 mx-auto pb-30">
+    
+    <thead>
+      <tr>
+        <th class="numeric">Id</th>
+        <th class="text">email</th>
+        <th class="sortable">first_name</th>
+        <th class="sortable">last_name</th>
+        <th class="image">avatar</th>
+        <th class="text">Actions</th>
+      </tr>  
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios | filterUserByName: terminoBuscado.value" id="user-list__table-item-[index]">
+        <td class="numeric">
+          <span class="user-list__table-item-[index]">{{usuario.id}}</span>      
+        </td>
+        <td class="text">
+          <span id="user-list__table-item-[index]-email">{{usuario.email}}</span>
+          <!-- <input formControlName="email" [(ngModel)]="usuario.email"/> -->
+        </td>
+        <td class="sortable">
+          <span id="user-list__table-item-[index]-first_name">{{usuario.first_name}}</span>
+          <!-- <input formControlName="first_name" [(ngModel)]="usuario.first_name"/> -->
+        </td>
+        <td class="sortable">
+          <span id="user-list__table-item-[index]-last_name">{{usuario.last_name}}</span>
+          <!-- <input formControlName="last_name" [(ngModel)]="usuario.last_name"/> -->
+        </td>
+        <td class="image">
+          <span>
+            <img src='{{usuario.avatar}}' class="w-50 mx-auto pb-30" alt='{{usuario.avatar}}' id="user-list__table-item-[index]-avatar"/>
+          </span>
+        </td>
+        <td>
+          <button (click)="eliminarUsuario(usuario.id, usuario.first_name, usuario.last_name)" id="user-list__table-item-[index]-btn-delete">Eliminar usuario</button>
+        </td>
+      </tr>
+    </tbody>    
+  </table>
+</form>
+</div>
